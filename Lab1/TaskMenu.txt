@@ -1,0 +1,7 @@
+Lab Task-1a:
+1.	Find the average value of the elements of an array.
+2.	Find the minimum and maximum value of the elements of an array.
+3.	Take two strings as your first and last name, then concatenate the two strings together so that you can find your full name:
+e.g. First name = “XX” and Lastname = “YY”
+output: full name = “XX YY”
+4.	Write a program to calculate the factorial of a given numbers (using loop):
