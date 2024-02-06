@@ -13,7 +13,7 @@ int main()
     bool ok = true;
     int n = s.size();
     for(int i=0;i<n;++i) {
-        if(s[i] == '*') {
+        if(s[i] == '/' && s[i+1] == '*') {
             ok = false;
         }
     }
