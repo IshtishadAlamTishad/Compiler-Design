@@ -69,23 +69,15 @@ bool isValidIdentifier(string v) {
 
 int main()
 {
-
-
     string v;
     cout << "Enter Variable name : ";
     cin >> v;
 
     freopen("input.txt","r",stdin);
-    int t;
-    cin >> t;
-    while(t--) {
 
     if(isValidIdentifier(v)) {
         cout << "\nVariable is correct\n";
     } else {
         cout << "Code ERROR\n";
-    }
-
-    cout << "\nEnter Variable name : ";
     }
 }
