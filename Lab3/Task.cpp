@@ -1,24 +1,12 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
 using namespace std;
 
-
 struct Keys {
-    string a[100][100] = {
-        {"int","double","char","bool","string","float","long long","long long int","short","long","main","int32_t"},
-        {"using","namespace","default","const","delete","continue","class","asm","operator","private","public","protected","new","enum","struct","inline","typedef","union"},
-        {"for","while","do","switch","auto","break","friend","if","else if","else","static","void","volatile","goto","register","return","sizeof","virtual","template",},
-        {"vector","map","set","ordered_set","binary_search","bitset","upper_bound","lower_bound","try","catch","throw","deque","max","min","*max_element","*min_element"}
-    };
-
-};
+    string a[100];
+}key;
 
 
 bool isValidIdentifier(string v) {
-
-
-       Keys key;
-
 
         bool ok =true;
 
@@ -35,13 +23,11 @@ bool isValidIdentifier(string v) {
         int n = v.size();
 
         for(int i=0;i<100;++i) {
-         for(int j=0;j<100;++j) {
-         if(key.a[i][j] == v) {
+         if(key.a[i]== v) {
             ok = false;
             cout <<"\nInvalid!\n";
-            cout <<"Variable cannot be a datatype -> " << v << '\n';
+            cout <<"Variable cannot be a keyword -> " << v << '\n';
             cout << '\n';
-        }
         }
         }
 
@@ -74,10 +60,15 @@ int main()
     cin >> v;
 
     freopen("input.txt","r",stdin);
-
+    int n;
+    cin >> n;
+    for(int i=0;i<n;++i) {
+       cin >> key.a[i];
+    }
     if(isValidIdentifier(v)) {
         cout << "\nVariable is correct\n";
     } else {
         cout << "Code ERROR\n";
     }
+
 }
